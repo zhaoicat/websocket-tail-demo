@@ -24,6 +24,7 @@ public class TailLogThread extends Thread {
 		try {
 			while((line = reader.readLine()) != null) {
 				// 将实时日志通过WebSocket发送给客户端，给每一行添加一个HTML换行
+				System.out.println(line);
 				session.getBasicRemote().sendText(line + "<br>");
 			}
 		} catch (IOException e) {
