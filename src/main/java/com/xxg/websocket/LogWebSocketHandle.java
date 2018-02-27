@@ -1,7 +1,9 @@
 package com.xxg.websocket;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 
 import javax.websocket.OnClose;
 import javax.websocket.OnError;
@@ -52,4 +54,5 @@ public class LogWebSocketHandle {
 	public void onError(Throwable thr) {
 		thr.printStackTrace();
 	}
+
 }
